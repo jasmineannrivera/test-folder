@@ -166,3 +166,11 @@ function notNotNot(n, bool) {
 
 
 }
+
+
+//write a function that accepts two inputs (x, y). Return true if the sum of both numbers is less than 100, otherwise return false. (function lessThan100(a, b))
+
+function isSum100(x, y) {
+    return (x + y < 100 );
+
+}
