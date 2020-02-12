@@ -174,3 +174,63 @@ function isSum100(x, y) {
     return (x + y < 100 );
 
 }
+
+
+// #11 Write a function  called doubleTheFun that takes 1 parameter. It should double numbers, and
+// repeats strings. example 4->8, 2.5->5, 'Awesome'->'AwesomeAwesome'
+
+
+
+
+// #15 Create a function called outside that takes in a temperature (number), a humidity(number), and a cloudiness(number), in that order. Using the following to return the correct values
+/*
+    temperature over 80 and humidity over 40 - return "I'm all sweat"
+    temperature under 40 and cloudiness over 60 - return "I have icicles"
+    temperature over 80 and humidity under 40 and cloudiness under 20 - return "I'm literally in the desert"
+    temperature over 80 or humidity over 50 or cloudiness over 50 - return "Hmm, probably not"
+    Otherwise - return "I love outside"
+*/
+
+
+
+// Write a function that takes in 2 parameters. If both parameters are the same type an the same value return "Exact match". If both parameters have the same value but are different types return "Different types" Otherwise return "Different values"
+
+
+
+
+
+// Write a function that uses a loop to console.log "99 bottles of beer on the wall" until the passed argument number. Use a break to exit the loop, and console.log the message "Aw no, we're not doing that song again," in the event the argument is a number greater than 99, or is not a number.
+
+
+// Write a loop that prompts the user to confirm if they have drank water today. This loop should run until the user has confirmed the prompt (clicked yes) 6 times.
+
+
+
+
+// Write a loop that will console.log hexadecimal numbers until it reaches 'FF'. Take a look at this stackoverflow post for information on converting decimal numbers to hexadecimal.  https://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hexadecimal-in-javascript
+
+
+
+
+// Write a function called sum  that will return the sum of an unknown number of arguments
+
+
+
+
+
+// Create a function that determines if a temperature is below boiling point, at boiling point or above boiling point. Boiling point is 212 degrees Farhenheit.
+// // Use the test variables provided below. Expected outcome: "35 is below boiling point", "350 is above boiling point", "212 is at boiling point"
+
+
+
+
+// Create a function that takes three integer arguments (a, b, c) and returns the number of equal values.
+//
+//     Examples
+// equal(3, 4, 3) ➞ 2
+//
+// equal(1, 1, 1) ➞ 3
+//
+// equal(3, 4, 1) ➞ 0
+// Notes
+// Your function must return 0, 2 or 3.
