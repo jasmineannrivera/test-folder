@@ -220,11 +220,23 @@ function isSum100(x, y) {
 
 // Create a function that determines if a temperature is below boiling point, at boiling point or above boiling point. Boiling point is 212 degrees Farhenheit.
 // // Use the test variables provided below. Expected outcome: "35 is below boiling point", "350 is above boiling point", "212 is at boiling point"
+    function boilingPoint(temp) {
+        if (temp > 212) {
+            console.log(temp + " is below boiling point");
+        } else if (temp === 212) {
+            console.log(temp + " is at boiling point");
+        } else if (temp < 212) {
+            console.log(temp + " is below boiling point");
+        } else {
+            console.log("huh?");
+        }
+    }
+        boilingPoint("r");
 
 
 
 
-// Create a function that takes three integer arguments (a, b, c) and returns the number of equal values.
+// Create a function called equal that takes three integer arguments (a, b, c) and returns the number of equal values.
 //
 //     Examples
 // equal(3, 4, 3) ➞ 2
@@ -234,3 +246,57 @@ function isSum100(x, y) {
 // equal(3, 4, 1) ➞ 0
 // Notes
 // Your function must return 0, 2 or 3.
+
+
+
+
+
+
+
+// write a function called divisibleBy3
+
+
+        function divisibleBy3(input) {
+            return input % 3 === 0;
+        }
+
+
+        
+
+
+        function isPurple(color) {
+            return typeof color ==="string" && color === "purple";
+
+        }
+
+function palindrome(str) {
+    // Step 1. Lowercase the string and use the RegExp to remove unwanted characters from it
+    var re = /[\W_]/g; // or var re = /[^A-Za-z0-9]/g;
+
+    var lowRegStr = str.toLowerCase().replace(re, '');
+    // str.toLowerCase() = "A man, a plan, a canal. Panama".toLowerCase() = "a man, a plan, a canal. panama"
+    // str.replace(/[\W_]/g, '') = "a man, a plan, a canal. panama".replace(/[\W_]/g, '') = "amanaplanacanalpanama"
+    // var lowRegStr = "amanaplanacanalpanama";
+
+    // Step 2. Use the same chaining methods with built-in functions from the previous article 'Three Ways to Reverse a String in JavaScript'
+    var reverseStr = lowRegStr.split('').reverse().join('');
+    // lowRegStr.split('') = "amanaplanacanalpanama".split('') = ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
+    // ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].reverse() = ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"]
+    // ["a", "m", "a", "n", "a", "p", "l", "a", "n", "a", "c", "a", "n", "a", "l", "p", "a", "n", "a", "m", "a"].join('') = "amanaplanacanalpanama"
+    // So, "amanaplanacanalpanama".split('').reverse().join('') = "amanaplanacanalpanama";
+    // And, var reverseStr = "amanaplanacanalpanama";
+
+    // Step 3. Check if reverseStr is strictly equals to lowRegStr and return a Boolean
+    return reverseStr === lowRegStr; // "amanaplanacanalpanama" === "amanaplanacanalpanama"? => true
+}
+
+console.log(palindrome("A man, a plan, a canal. Panama"));
+
+
+// function equal(a, b, c) {
+//     if (a === b && a === c) {
+//         return 3;}
+//     if (a === b || a === c || b === c) {
+//         return 2;}
+//     return 0;
+// }
