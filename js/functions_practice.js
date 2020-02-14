@@ -320,3 +320,19 @@ palindrome("A man, a plan, a canal. Panama");
 //         return 2;}
 //     return 0;
 // }
+
+
+
+
+function isPalendrome(input) {
+    var re = /[\w_]/g;  						//establishes unwanted characters.
+    var lowRegStr = input.toLowerCase().replace(re, '');		//removes unwanted characters.
+    var revStr = lowRegStr.split('').reverse().join('');		//reverses scrubbed string.
+    return revStr === lowRegStr;					//checks if letters are same forward or backwards.
+}
+9:01
+function isPalendrome(input) {
+    var re = /[\w_]/g;  						//establishes unwanted characters.
+    var lowRegStr = input.toLowerCase().replace(re, '');		//removes unwanted characters.
+    var revStr = lowRegStr.split('').reverse().join('');		//reverses scrubbed string.
+    return revStr === lowRegStr;					//checks if letters are same forward or backwards.
