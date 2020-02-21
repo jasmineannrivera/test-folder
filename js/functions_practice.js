@@ -324,15 +324,235 @@ palindrome("A man, a plan, a canal. Panama");
 
 
 
-function isPalendrome(input) {
-    var re = /[\w_]/g;  						//establishes unwanted characters.
-    var lowRegStr = input.toLowerCase().replace(re, '');		//removes unwanted characters.
-    var revStr = lowRegStr.split('').reverse().join('');		//reverses scrubbed string.
-    return revStr === lowRegStr;					//checks if letters are same forward or backwards.
+// function isPalendrome(input) {
+//     var re = /[\w_]/g;  						//establishes unwanted characters.
+//     var lowRegStr = input.toLowerCase().replace(re, '');		//removes unwanted characters.
+//     var revStr = lowRegStr.split('').reverse().join('');		//reverses scrubbed string.
+//     return revStr === lowRegStr;					//checks if letters are same forward or backwards.
+// }
+// 9:01
+// function isPalendrome(input) {
+//     var re = /[\w_]/g;  						//establishes unwanted characters.
+//     var lowRegStr = input.toLowerCase().replace(re, '');		//removes unwanted characters.
+//     var revStr = lowRegStr.split('').reverse().join('');		//reverses scrubbed string.
+//     return revStr === lowRegStr;					//checks if letters are same forward or backwards.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 5. Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will check if the current number is odd or even, and display a message to the screen. Go to the editor
+// Sample Output :
+//     "0 is even"
+//     "1 is odd"
+//     "2 is even"
+
+
+    for (var i = 0; i <= 15; i++) {
+        if (i % 2 === 0) {
+            console.log(i + " is even");
+        } else {
+            console.log(i + " is odd");
+        }
+    }
+
+
+
+// 1.  Write a function, `filterNumbers()` that takes in an array of mixed data types and returns an array of only the numbers type in ascending order.
+
+    function filterNumbers(arr) {
+        function numbers(x) {
+            return typeof x === "number";
+        }
+        return arr.filter(numbers).sort(function(a, b){return a-b});
+
+
+    }
+
+    console.log(filterNumbers(["fred", true, 20, 5]));
+
+
+
+
+
+
+// Write a function, `getOlder()` that takes in array of dog objects and increases the value of the age properties by 1.
+    var dogs = [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ];
+    function getOlder(dogs) {
+        for (var i = 0; i < dogs.length; i++) {
+            dogs[i].age += 1;
+        }
+
+        return dogs;
+    }
+
+console.log(getOlder(dogs));
+
+
+
+// 3. Write a function, `washCars()` that takes in a array of car objects and sets the boolean properties of isDirty to false
+
+var cars = [
+    {
+        make: 'Volvo',
+        color: 'red',
+        year: 1996,
+        isDirty: true
+    },
+    {
+        make: 'Toyota',
+        color: 'black',
+        year: 2004,
+        isDirty: false
+    },
+    {
+        make: 'Ford',
+        color: 'white',
+        year: 2007,
+        isDirty: true
+    }
+];
+
+
+    function washCars(cars) {
+        for (var i = 0; i < cars.length; i++) {
+            cars[i].isDirty = false;
+        }
+
+    }
+
+// +=2 inside for loop will make it go every other
+
+// Write a function, `adminList()` that takes in an array of user objects and returns a count of all admins based on the isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user objects that are admins.
+
+var users = [
+    {
+        isAdmin: true,
+        email: 'user1@email.com'
+    },
+    {
+        isAdmin: true,
+        email: 'user2@email.com'
+    },
+    {
+        isAdmin: false,
+        email: 'user3@email.com'
+    }
+];
+
+    function adminList(users) {
+        var count = 0;
+        for (var i = 0; i < users.length; i++) {
+            if (users[i].isAdmin === true) {
+                ++count;
+            }
+        }
+        return count;
+    }
+
+console.log(adminList(users));
+
+// Refactor to return an array of admin-only user emails
+
+function adminEmails(users) {
+    var emails = [];
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].isAdmin === true) {
+            emails.push(users[i].email);
+        }
+    }
+    return emails;
+
 }
-9:01
-function isPalendrome(input) {
-    var re = /[\w_]/g;  						//establishes unwanted characters.
-    var lowRegStr = input.toLowerCase().replace(re, '');		//removes unwanted characters.
-    var revStr = lowRegStr.split('').reverse().join('');		//reverses scrubbed string.
-    return revStr === lowRegStr;					//checks if letters are same forward or backwards.
+
+console.log(adminEmails(users));
+
+
+
+// Refactor again to return an array of user objects that are admins
+
+
+function userObjects(users) {
+    var adminObjects = [];
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].isAdmin === true) {
+            adminObjects.push(users[i]);
+        }
+
+    }
+    return adminObjects;
+}
+
+console.log(userObjects(users));
+
+
+
+// Create a function, `makeSandwichObjects()` that takes in two array of strings, breads and fillings and returns an array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
+
+var breads  = [
+    "white",
+    "wheat",
+    "rhy",
+    "white"
+];
+
+var fillings = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
+
+    function makeSandwichObjects(breads, fillings) {
+
+
+    }
+
+
+
+
+
+
+// Create a function that takes an array of non-negative numbers and strings and return a new array without the strings.
+//
+//     Examples
+// filterArray([1, 2, "a", "b"]) ➞ [1, 2]
+//
+// filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
+//
+// filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
