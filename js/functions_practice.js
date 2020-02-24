@@ -542,10 +542,44 @@ var fillings = [
 
 
     }
+var people = [
+    "Jeff",
+    "Bryce",
+    "Kate",
+    "Jasmine"
+];
+var traits = [
+    "Awesome and funny",
+    "Homeboy",
+    "Thunder-cunt",
+    "Fabulous"
+];
+
+function frans(people, traits) {
+    var newArray = [];
+    for (var i = 0; i < people.length && traits.length; i++) {
+        newArray.push({person: people[i], trait: traits[i]})
+    }
+    return newArray;
+
+    }
+
+console.log(frans(people, traits));
+
+//Write a function named remove3s that accepts and array of numbers and returns an array with all of the same numbers except for 3
+
+function remove3s(array) {
+    var numArray = [];
+     array.forEach(function (num) {
+        if(num !== 3){
+            numArray.push(num)
+        }
+    });
+    return numArray;
+}
 
 
-
-
+console.log(remove3s([1, 2, 3, 3, 3, 4, 5]));
 
 
 // Create a function that takes an array of non-negative numbers and strings and return a new array without the strings.
@@ -556,3 +590,23 @@ var fillings = [
 // filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
 //
 // filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
+
+
+
+// Create a function that takes a string and returns the word count. The string will be a sentence.
+
+function wordCount(str){
+    return str.split(" ").length;
+}
+
+console.log(wordCount("This is four words"));
+
+
+
+<!-- forEach loop format -->
+function nameofFunction(x) {
+    x.forEach(function (item){
+        //do whatever you want done to each item;
+    });
+    return x;
+}
