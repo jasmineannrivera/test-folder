@@ -539,9 +539,16 @@ var fillings = [
 ];
 
     function makeSandwichObjects(breads, fillings) {
+        var newArray = [];
+        for (var i = 0; i < breads.length && fillings.length; i++) {
+            newArray.push({bread: breads[i], filling: fillings[i]})
+        }
+        return newArray;
 
 
     }
+
+console.log(makeSandwichObjects(breads, fillings));
 var people = [
     "Jeff",
     "Bryce",
@@ -551,7 +558,7 @@ var people = [
 var traits = [
     "Awesome and funny",
     "Homeboy",
-    "Thunder-cunt",
+    "Thunder-fun",
     "Fabulous"
 ];
 
@@ -610,3 +617,84 @@ function nameofFunction(x) {
     });
     return x;
 }
+
+
+
+// TODO Write a function named keepYellow that accepts an array of strings and returns an array with all the strings that are equal to "yellow"
+
+
+function keepYellow(arr) {
+    var yellowArray = [];
+    arr.forEach(function (str) {
+        if(str.toLowerCase() === "yellow"){
+            yellowArray.push(str)
+        }
+    });
+    return yellowArray;
+
+}
+console.log(keepYellow(["yellow", "red", "blue", "Yellow", "black", "brown", "yellow"]));
+
+
+
+//Write a function named 'double' that accepts a number and returns the number squared.
+//Write a function named remove3s that accepts and array of numbers and returns an array with all of the same numbers except for 3
+//Write a function named sumAll that returns the sum of all numbers in an array
+//write a function named countEvens that accepts an array of nums and returns the number of even numbers in the array.
+//write a function called stringLength that returns the length of a string, if the input is not a string, return false;
+// Create a function that takes a string and returns the word count. The string will be a sentence.
+// 6:41
+// Those are the questions
+// 6:42
+// The ANSWERS
+// function isNegative(number) {
+//     return parseFloat(number) < 0;
+// }
+function isTen(number) {
+    return parseFloat(number) === 10;
+}
+//Write a function named 'double' that accepts a number and returns the number squared.
+function double(num) {
+    return parseFloat(num) * parseFloat(num);
+//    or: Math.pow(num,2);
+}
+//Write a function named remove3s that accepts and array of numbers and returns an array with all of the same numbers except for 3
+function remove3s(array) {
+    var numArray = [];
+    numbers.forEach(function (num) {
+        if(num !== 3){
+            numArray.push(num)
+        }
+    })
+}
+//Write a function named sumAll that returns the sum of all numbers in an array
+function sumAll(array) {
+    var sumArray = [];
+    for(var i = 0; i < array.length; i++){
+        sumArray += array[i];
+    }
+    return sumArray
+}
+//write a function named countEvens that accepts an array of nums and returns the number of even numbers in the array.
+function countEvens (array) {
+    var evens = 0;
+    arr.forEach(function (x) {
+        if (x % 2 === 0){
+            evens++;
+        }
+        return evens;
+    })
+}
+//write a function called stringLength that returns the length of a string, if the input is not a string, return false;
+function stringLength(input) {
+    if (typeof input === "string"){
+        return input.length;
+    }else {
+        return false;
+    }
+}
+// Create a function that takes a string and returns the word count. The string will be a sentence.
+function countWords(str){
+    return str.split(" ").length;
+}
+
