@@ -3,16 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Canvas Test</title>
-	<style type="text/css">
-		canvas { border: 1px solid black;}
+	<style>
+
+		#kitten {
+			display: none;
+			z-index: -10;
+		}
+		#custom-text{
+
+		}
+
 	</style>
 </head>
 <body>
-	<canvas id="canvas" width="150" height="150"></canvas>
-
-
-	<script src="js/jquery-2.2.4.js"></script>
-	<script src="js/canvas-test.js"></script>
-
+<canvas id="canvas" width="500" height="500">
+	Canvas requires a browser that supports HTML5.
+</canvas>
+<img id="kitten" src="kitten.jpeg"/>
+<br>
+<input id="custom-text" type="text" value="test"/>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="js/canvas-test.js"></script>
 </body>
 </html>

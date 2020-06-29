@@ -1,17 +1,59 @@
-"use strict";
 
-!function draw() {
-    let canvas = $("#canvas")[0];
-    if (canvas.getContext) {
-        let ctx = canvas.getContext('2d');
+    var canvas = $('#canvas')[0];
+    var ctx = canvas.getContext('2d');
 
-        ctx.fillStyle = 'rgb(200, 0, 0)';
-        ctx.fillRect(10, 10, 50, 50);
+// drawing image of course!
+function drawImage() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let  img = $('#kitten')[0];
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+}
 
-        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-        ctx.fillRect(30, 30, 50, 50);
+onload = function() {
+    drawImage();
+    drawText();
+
+};
+
+
+// styling for text
+    ctx.lineWidth  = 5;
+    ctx.font = '20pt sans-serif';
+    ctx.strokeStyle = 'black';
+    ctx.fillStyle = 'white';
+    ctx.textAlign = 'center';
+    ctx.lineJoin = 'round';
+
+
+// variables needed for text
+    let textBox = $('#custom-text')[0];
+    console.log(textBox);
+    let text = textBox.value;
+    console.log(text);
+
+    //When user inputs new text, draw it on canvas. **still need to figure out how to get rid of old text
+    textBox.oninput = function(ev) {
+        removeText();
+        text = this.value;
+        console.log(text);
+        drawText();
+    };
+
+
+    // Draw the text
+    function drawText() {
+
+        text = text.toUpperCase();
+        let x = canvas.width/2;
+        let y = canvas.height - canvas.height/4.5;
+        ctx.strokeText(text, x, y);
+        ctx.fillText(text, x, y);
     }
-}();
+
+    function removeText() {
+        text = "";
+    }
+
 
 
 
